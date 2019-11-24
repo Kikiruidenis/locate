@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<br>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+       <a href="/child">All:</a> 
+    </li>
+    <li class="breadcrumb-item">
+        {{missing.pk }}
+    </li>
+    <li class="breadcrumb-item active">{{missing.name}}</li>
+</ol>
+<div class="row">
+
+    <div class="col-md-8">
+        <img class="img-fluid" src="http://127.0.0.1:8000/media/{{missing.child_pic}}" alt="">
+    </div>
+
+    <div class="col-md-4">
+        <p>Missing person details:</p>
+        <ul>
+            <li>Name: {{ missing.name }}</li>
+            <li>Age: {{ missing.age }}</li>
+            <li>Gender: {{ missing.gender }}</li>
+            <li>Complexion: {{ missing.complexion}}</li>
+            <li>Found: {{ missing.found }}</li>
+        </ul>
+
+    </div>
+
+</div>
+<br><br>
+<!-- /.row -->
+
+{% endblock %}

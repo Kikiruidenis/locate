@@ -1,0 +1,45 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="mt-4 mb-3">
+  <small>Search results</small>
+</h1>
+
+<ol class="breadcrumb">
+
+  <li class="breadcrumb-item active">{{ text }}</li>
+</ol>
+
+<!-- Portfolio Item Row -->
+{% if text == "Person Found"%}
+<div class="row">
+
+  <div class="col-md-8">
+    <img class="img-fluid" src="http://127.0.0.1:8000/media/{{image}}" alt="">
+  </div>
+
+  <div class="col-md-4">
+    <h3 class="my-3">{{name}}</h3>
+    <p>Missing person details:</p>
+    <ul>
+      <li>Guardian contact: {{contact}}</li>
+      <li>Location found: {{location}}</li>
+    </ul>
+
+  </div>
+
+</div>
+<br><br>
+{% else %}
+
+<center>
+  <img height="35%" width="35%" src="{% static 'img/error.png' %}" alt="">
+  <p>No data</p>
+</center>
+
+<br><br>
+{% endif %}
+<!-- /.row -->
+
+{% endblock %}

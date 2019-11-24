@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% for item in lost%}
+<div class="col-lg-4 col-sm-6 portfolio-item">
+    <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://127.0.0.1:8000/media/{{item.child_pic}}" alt=""></a>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a href="#">{{item.name}}</a>
+            </h4>
+            <p class="card-text">Dear {{item.name}} was found by a good samaritan</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

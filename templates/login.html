@@ -1,0 +1,42 @@
+{% extends "master.html" %}
+{% block content %}
+{% load bootstrap3 %}
+<style>
+  form {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+</style>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Login to your account</li>
+</ol>
+<br><br>
+<!-- Content Row -->
+<div class="row">
+  <div class="col-lg-3 mb-4">
+
+  </div>
+  <div class="col-lg-6 mb-4">
+    <div class="card card-outline h-100">
+      <h3 class="card-header bg text-black">Fill this form</h3>
+
+      <form style="margin-top:30px" method="POST" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+
+
+        <input style="width:100%" class="btn btn-success" type="submit" value="Login"
+          class="btn btn-default button button-block">
+        <!-- <input type="submit" value="Login" class="btn btn-default button button-block"> -->
+      </form>
+
+
+    </div>
+  </div>
+  <div class="col-lg-3 mb-4">
+
+  </div>
+</div><br><br><br>
+{% endblock %}

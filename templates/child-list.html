@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+{% block content %}
+<!-- Page Heading/Breadcrumbs -->
+<h1 class="mt-4 mb-3">
+    <small>Missing persons</small>
+</h1>
+
+<br>
+<hr style="width:50%"><br>
+
+<div class="row">
+    {% for missing in missings %}
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="{{ missing.get_absolute_url }}"><img class="card-img-top"
+                    src="http://127.0.0.1:8000/media/{{missing.child_pic}}" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="{{ missing.get_absolute_url }}">{{missing.name}}</a>
+                </h4>
+            </div>
+            {% if missing.user|stringformat:"s" == current_user|stringformat:"s" %}
+            <div class="card-footer text-muted">
+                <span class="input-group-btn pull-right">
+                    <a href="{{missing.get_absolute_url}}delete"> <button style="width:100%" class="btn btn-danger" type="button">delete
+                    </button></a>
+                </span>
+
+            </div>
+            {%endif%}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock%}

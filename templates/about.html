@@ -1,0 +1,64 @@
+{% extends "master.html"%}
+{% block content %}
+{% load static %}
+<!-- Page Heading/Breadcrumbs -->
+<h1 class="mt-4 mb-3">
+    <small>Let's find the lost children together!</small>
+</h1>
+<br>
+<hr style="width:50%">
+<br>
+<!-- Intro Content -->
+<div class="row">
+    <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/child1.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-6">
+        <h2>About LocateUs</h2>
+        <p>When you lose a child, the first thing to do is to report to the nearest police station. However, report them
+            to us,
+            as we maintain a real-time database of lost and found children.
+            All you have to do is report here and leave the rest to us. We re-unite parents or guardians with their
+            children</p>
+
+    </div>
+</div>
+<!-- /.row -->
+<br>
+<hr style="width:50%">
+<br>
+<!-- Team Members -->
+<h2>Benefits of our system</h2><br>
+
+<div class="row">
+    <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+            <img class="img-fluid rounded mb-4" src="{% static 'img/01.png' %}" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Reuniting families</h4>
+                <p class="card-text">LocateUs increases the likelihood of reuniting lost children with their parents or guardians with the minimum of inconvenience. </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+            <img class="img-fluid rounded mb-4" src="{% static 'img/02.jpg' %}" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Reporting made easier</h4>
+                <p class="card-text">Making the reporting process for the public and Police more efficient.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+            <img class="img-fluid rounded mb-4" src="{% static 'img/03.jpg' %}" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Hopes uplifted</h4>
+                <p class="card-text">Found children becoming more easily identifiable and returned to people.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+
+{% endblock%}
